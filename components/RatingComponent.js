@@ -1,31 +1,32 @@
-import React from 'react';
+import React from "react";
+import Rating from "./Rating";
 
-const RatingComponent = ({ starImage, ratingText, personImage, personName, personLocation }) => {
+const RatingSection = () => {
   return (
-    <div className="flex flex-col p-8 mr-8">
-      <img
-        src={starImage}
-        alt="Rating"
-        className="h-3 w-20"
-      />
-      <p className="text-2xl italic text-[#152F2E] mt-2">
-        {ratingText}
-      </p>
-      <div className="flex md:w-1/2">
-        <div>
-          <img
-            src={personImage}
-            alt="Person"
-            className="w-50 h-50 mt-4"
-          />
-        </div>
-        <div className="p-4">
-          <span className="text-xs">{personName}</span>
-          <span>{personLocation}</span>
-        </div>
+    <div className="flex flex-col items-center justify-center py-16 sm:px-20">
+      <div className="w-full md:w-1/2 p-8 text-center">
+        <span className="text-xs tracking-[2px] font-bold text-[#00C2C5]">
+          DON&apos;T JUST TAKE OUR WORD FOR IT
+        </span>
+      </div>
+      <div className="flex flex-col md:flex-row justify-center mb-8">
+        <Rating
+          starImage="https://d9hhrg4mnvzow.cloudfront.net/templates.unbounce.com/multor/dfb61e74-multor-testimonial1-stars.svg"
+          ratingText="Share a real testimonial that hits some of your benefits (but isn&apos;t too sales-y)."
+          personImage="https://d9hhrg4mnvzow.cloudfront.net/templates.unbounce.com/multor/52bdc545-multor-testimonial1-headshot_101e01e00000000000001o.jpg"
+          personName="John Wick"
+          personLocation="Location"
+        />
+        <Rating
+          starImage="https://d9hhrg4mnvzow.cloudfront.net/templates.unbounce.com/multor/6d441dac-multor-testimonial2-stars.svg"
+          ratingText="Include someone talking about how easy it was to sign up and participate."
+          personImage="https://d9hhrg4mnvzow.cloudfront.net/templates.unbounce.com/multor/94045dbc-multor-testimonial2-headshot_101e01e00000000000001o.jpg"
+          personName="John Wick"
+          personLocation="Location"
+        />
       </div>
     </div>
   );
 };
 
-export default RatingComponent;
+export default RatingSection;
